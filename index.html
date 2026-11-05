@@ -4,195 +4,281 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Explore World - Tourism Website</title>
+<title>Explore World | Premium Travel Agency</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
 
 body {
-    background: #f5f8fa;
+    background: #fff;
+    color: #263238;
 }
 
-/* Navigation */
 header {
-    background: #063b46;
-    color: white;
-    padding: 20px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: sticky;
     top: 0;
     z-index: 100;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    box-shadow: 0 3px 15px #0001;
 }
 
 .logo {
-    font-size: 27px;
-    font-weight: bold;
-    color: #ffcc66;
+    color: #087e78;
+    font-size: 26px;
+    font-weight: 800;
 }
 
 nav a {
-    color: white;
     text-decoration: none;
-    margin-left: 25px;
-    font-size: 16px;
+    color: #263238;
+    margin-left: 22px;
+    font-weight: 500;
 }
 
 nav a:hover {
-    color: #ffcc66;
+    color: #087e78;
 }
 
-/* Hero Section */
 .hero {
-    height: 600px;
-    background:
-    linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
-    url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1800&q=85');
+    min-height: 650px;
+    background: linear-gradient(90deg,#0009,#0002),
+    url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1900&q=85');
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    padding: 8%;
     color: white;
 }
 
+.hero-content {
+    max-width: 720px;
+}
+
 .hero h1 {
-    font-size: 55px;
+    font-size: clamp(38px,6vw,65px);
+    line-height: 1.2;
     margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 30px;
 }
 
 .btn {
-    background: #ff9f1c;
-    color: white;
-    padding: 14px 30px;
-    text-decoration: none;
+    background: #f4a340;
+    padding: 14px 28px;
     border-radius: 30px;
+    color: white;
+    text-decoration: none;
     display: inline-block;
-    font-weight: bold;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
 }
 
 .btn:hover {
-    background: #e87900;
+    background: #df8520;
 }
 
-/* Section */
+.search {
+    background: white;
+    padding: 28px;
+    width: 85%;
+    margin: -45px auto 20px;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px #0002;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.search input, .search select {
+    flex: 1;
+    min-width: 160px;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+}
+
 section {
-    padding: 65px 8%;
+    padding: 75px 8%;
+}
+
+.heading {
     text-align: center;
+    margin-bottom: 40px;
 }
 
-.section-title {
+.heading h2 {
     font-size: 35px;
-    color: #063b46;
-    margin-bottom: 15px;
+    color: #075b57;
 }
 
-.subtitle {
-    color: #666;
-    margin-bottom: 35px;
+.heading p {
+    color: #777;
+    margin-top: 10px;
 }
 
-/* Destination Cards */
-.destinations {
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
     gap: 25px;
 }
 
-.card {
+.destination {
     background: white;
-    border-radius: 15px;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 5px 18px rgba(0,0,0,.12);
+    box-shadow: 0 5px 20px #0001;
     transition: .3s;
 }
 
-.card:hover {
-    transform: translateY(-10px);
+.destination:hover {
+    transform: translateY(-8px);
 }
 
-.card img {
+.destination img {
     width: 100%;
-    height: 220px;
+    height: 230px;
     object-fit: cover;
 }
 
-.card h3 {
-    color: #063b46;
-    margin: 18px;
-    font-size: 23px;
+.destination-content {
+    padding: 20px;
 }
 
-.card p {
-    color: #666;
-    padding: 0 15px 20px;
-    line-height: 1.5;
+.destination h3 {
+    color: #075b57;
+    margin-bottom: 8px;
 }
 
-/* About */
-.about {
-    background: #e6f2f1;
-}
-
-.about p {
-    max-width: 850px;
-    margin: auto;
-    color: #555;
-    line-height: 1.8;
-    font-size: 17px;
-}
-
-/* Packages */
-.packages {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 25px;
-}
-
-.package {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px #ddd;
-}
-
-.package h3 {
-    color: #063b46;
-    margin-bottom: 15px;
+.destination p {
+    color: #777;
+    font-size: 14px;
 }
 
 .price {
-    font-size: 28px;
-    color: #ff8c00;
-    font-weight: bold;
-    margin: 15px;
+    color: #e99125;
+    font-weight: 700;
+    margin-top: 15px;
 }
 
-/* Booking */
+.about {
+    background: #eef7f5;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    align-items: center;
+    gap: 40px;
+}
+
+.about img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about p {
+    line-height: 1.9;
+    color: #555;
+    margin: 15px 0;
+}
+
+.stats {
+    background: #075b57;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    text-align: center;
+    gap: 25px;
+}
+
+.stat h2 {
+    font-size: 36px;
+    color: #ffc46c;
+}
+
+.packages {
+    background: #fafafa;
+}
+
+.package {
+    padding: 30px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px #0001;
+    text-align: center;
+}
+
+.package h3 {
+    color: #075b57;
+    margin-bottom: 12px;
+}
+
+.package h2 {
+    color: #e99125;
+    margin: 18px 0;
+}
+
+.package p {
+    margin: 12px 0;
+    color: #777;
+}
+
+.offer {
+    background: linear-gradient(90deg,#034c48dd,#034c4880),
+    url('https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+.offer h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.testimonial {
+    background: #eef7f5;
+    padding: 28px;
+    border-radius: 12px;
+    line-height: 1.8;
+}
+
+.testimonial h3 {
+    color: #075b57;
+    margin-top: 15px;
+}
+
 .booking {
-    background: #063b46;
+    background: #075b57;
     color: white;
 }
 
-.booking h2 {
+.booking .heading h2 {
     color: white;
 }
 
 .booking form {
-    max-width: 600px;
+    max-width: 650px;
     margin: auto;
     display: grid;
     gap: 15px;
@@ -203,48 +289,88 @@ section {
     padding: 14px;
     border: none;
     border-radius: 7px;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .booking button {
     padding: 15px;
-    background: #ff9f1c;
-    color: white;
     border: none;
     border-radius: 7px;
+    background: #f4a340;
+    color: white;
     font-size: 17px;
+    font-weight: bold;
     cursor: pointer;
 }
 
-/* Footer */
-footer {
-    background: #022b34;
-    color: white;
+.newsletter {
     text-align: center;
-    padding: 30px;
+    background: #eef7f5;
 }
 
-footer p {
-    margin: 10px;
+.newsletter input {
+    padding: 14px;
+    width: min(350px,100%);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 15px 5px;
 }
 
-@media(max-width: 700px) {
+footer {
+    background: #062f32;
+    color: white;
+    padding: 55px 8% 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 30px;
+}
+
+footer h3 {
+    color: #ffc46c;
+    margin-bottom: 15px;
+}
+
+footer p, footer a {
+    color: #ddd;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+}
+
+.copyright {
+    border-top: 1px solid #ffffff30;
+    text-align: center;
+    margin-top: 35px;
+    padding-top: 20px;
+}
+
+@media(max-width:750px) {
     header {
         flex-direction: column;
         gap: 15px;
     }
 
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
     nav a {
-        margin: 7px;
+        margin: 0;
         font-size: 13px;
     }
 
-    .hero h1 {
-        font-size: 35px;
+    .hero {
+        min-height: 550px;
     }
 
-    .hero p {
-        font-size: 16px;
+    .search {
+        width: 92%;
     }
 }
 </style>
@@ -253,146 +379,359 @@ footer p {
 <body>
 
 <header>
-    <div class="logo">🌍 Explore World</div>
-
+    <div class="logo">🌍 EXPLORE WORLD</div>
     <nav>
         <a href="#home">Home</a>
         <a href="#destinations">Destinations</a>
         <a href="#about">About</a>
         <a href="#packages">Packages</a>
+        <a href="#reviews">Reviews</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
-<!-- Home -->
+<!-- HERO -->
 <div class="hero" id="home">
-    <div>
-        <h1>Discover Beautiful Places</h1>
-        <p>Travel the world, explore new cultures and create memories.</p>
-        <a href="#destinations" class="btn">Explore Destinations</a>
+    <div class="hero-content">
+        <h1>Discover The World With Us</h1>
+        <p>Explore breathtaking destinations, experience different cultures
+        and create unforgettable memories with our premium travel services.</p>
+        <a href="#destinations" class="btn">Explore Destinations →</a>
     </div>
 </div>
 
-<!-- Destinations -->
+<!-- SEARCH -->
+<div class="search">
+    <input type="text" id="searchDestination"
+    placeholder="Where do you want to go?">
+
+    <input type="date" id="travelDate">
+
+    <select id="travelType">
+        <option value="">Travel Type</option>
+        <option>Adventure</option>
+        <option>Family Trip</option>
+        <option>Honeymoon</option>
+        <option>Luxury</option>
+    </select>
+
+    <button class="btn" onclick="searchTrips()">Search</button>
+</div>
+
+<!-- DESTINATIONS -->
 <section id="destinations">
-    <h2 class="section-title">Popular Destinations</h2>
-    <p class="subtitle">Explore some of the world's most beautiful places.</p>
+    <div class="heading">
+        <h2>Popular Destinations</h2>
+        <p>Discover amazing destinations around the world.</p>
+    </div>
 
-    <div class="destinations">
+    <div class="grid" id="destinationGrid">
 
-        <div class="card">
+        <div class="destination">
             <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=800&q=80">
-            <h3>Bali, Indonesia</h3>
-            <p>Experience tropical beaches and beautiful landscapes.</p>
+            <div class="destination-content">
+                <h3>Bali, Indonesia</h3>
+                <p>Beautiful beaches, tropical nature and luxury resorts.</p>
+                <div class="price">Starting from ₹24,999</div>
+            </div>
         </div>
 
-        <div class="card">
+        <div class="destination">
             <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80">
-            <h3>Paris, France</h3>
-            <p>Discover romantic streets and the Eiffel Tower.</p>
+            <div class="destination-content">
+                <h3>Paris, France</h3>
+                <p>Romantic city, Eiffel Tower and wonderful experiences.</p>
+                <div class="price">Starting from ₹39,999</div>
+            </div>
         </div>
 
-        <div class="card">
+        <div class="destination">
             <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80">
-            <h3>Switzerland</h3>
-            <p>Enjoy amazing mountains and peaceful scenery.</p>
+            <div class="destination-content">
+                <h3>Switzerland</h3>
+                <p>Snow mountains, beautiful lakes and scenic views.</p>
+                <div class="price">Starting from ₹49,999</div>
+            </div>
         </div>
 
-        <div class="card">
+        <div class="destination">
             <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80">
-            <h3>Agra, India</h3>
-            <p>Visit the beautiful Taj Mahal and explore Indian culture.</p>
+            <div class="destination-content">
+                <h3>Agra, India</h3>
+                <p>Visit the magnificent Taj Mahal and explore Indian history.</p>
+                <div class="price">Starting from ₹5,999</div>
+            </div>
+        </div>
+
+        <div class="destination">
+            <img src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=800&q=80">
+            <div class="destination-content">
+                <h3>Kerala, India</h3>
+                <p>Backwaters, greenery and relaxing nature experiences.</p>
+                <div class="price">Starting from ₹8,999</div>
+            </div>
+        </div>
+
+        <div class="destination">
+            <img src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=800&q=80">
+            <div class="destination-content">
+                <h3>Maldives</h3>
+                <p>Luxury islands, crystal-clear water and beautiful beaches.</p>
+                <div class="price">Starting from ₹34,999</div>
+            </div>
         </div>
 
     </div>
 </section>
 
-<!-- About -->
+<!-- ABOUT -->
 <section class="about" id="about">
-    <h2 class="section-title">About Our Travel Agency</h2>
-    <p>
-        Welcome to Explore World! We help travelers discover amazing
-        destinations and enjoy unforgettable holidays. Our goal is
-        to provide comfortable journeys, affordable tour packages
-        and wonderful travel experiences.
-    </p>
+    <div class="about-content">
+        <div>
+            <h2>About Explore World</h2>
+            <p>
+            Explore World is a travel and tourism agency dedicated to
+            creating memorable journeys. We offer customized holiday
+            packages, comfortable accommodation, guided tours and
+            carefully planned travel experiences.
+            </p>
+            <p>
+            Whether you are planning a family holiday, honeymoon,
+            adventure trip or international vacation, we help you
+            make every journey special.
+            </p>
+            <a href="#contact" class="btn">Plan Your Trip</a>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=900&q=80"
+        alt="Travel planning">
+    </div>
 </section>
 
-<!-- Packages -->
-<section id="packages">
-    <h2 class="section-title">Our Tour Packages</h2>
-    <p class="subtitle">Choose your perfect holiday package.</p>
+<!-- STATS -->
+<section class="stats">
+    <div class="stat">
+        <h2>25+</h2>
+        <p>Destinations</p>
+    </div>
+    <div class="stat">
+        <h2>500+</h2>
+        <p>Happy Travellers</p>
+    </div>
+    <div class="stat">
+        <h2>50+</h2>
+        <p>Tour Packages</p>
+    </div>
+    <div class="stat">
+        <h2>24/7</h2>
+        <p>Customer Support</p>
+    </div>
+</section>
 
-    <div class="packages">
+<!-- PACKAGES -->
+<section class="packages" id="packages">
+    <div class="heading">
+        <h2>Our Travel Packages</h2>
+        <p>Choose a package that matches your travel dreams.</p>
+    </div>
+
+    <div class="grid">
 
         <div class="package">
             <h3>Basic Package</h3>
             <p>2 Days / 1 Night</p>
-            <div class="price">₹4,999</div>
-            <p>Hotel Stay</p>
-            <p>Local Sightseeing</p>
-            <p>Breakfast</p>
+            <h2>₹4,999</h2>
+            <p>✔ Hotel Accommodation</p>
+            <p>✔ Local Sightseeing</p>
+            <p>✔ Breakfast</p>
+            <a href="#contact" class="btn">Book Now</a>
         </div>
 
         <div class="package">
             <h3>Premium Package</h3>
             <p>4 Days / 3 Nights</p>
-            <div class="price">₹9,999</div>
-            <p>Luxury Hotel</p>
-            <p>Tour Guide</p>
-            <p>Food Included</p>
+            <h2>₹9,999</h2>
+            <p>✔ Premium Hotel</p>
+            <p>✔ Guided Tours</p>
+            <p>✔ Meals Included</p>
+            <a href="#contact" class="btn">Book Now</a>
         </div>
 
         <div class="package">
             <h3>Luxury Package</h3>
             <p>7 Days / 6 Nights</p>
-            <div class="price">₹19,999</div>
-            <p>5 Star Hotel</p>
-            <p>Private Transport</p>
-            <p>All Meals</p>
+            <h2>₹19,999</h2>
+            <p>✔ Luxury Accommodation</p>
+            <p>✔ Private Transport</p>
+            <p>✔ Special Experiences</p>
+            <a href="#contact" class="btn">Book Now</a>
         </div>
 
     </div>
 </section>
 
-<!-- Booking -->
+<!-- SPECIAL OFFER -->
+<section class="offer">
+    <h2>Special Holiday Offer!</h2>
+    <p>Plan your dream vacation and enjoy special seasonal discounts.</p>
+    <br>
+    <a href="#contact" class="btn">Get Your Travel Quote</a>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="reviews">
+    <div class="heading">
+        <h2>What Our Travellers Say</h2>
+        <p>Experiences from our travel community.</p>
+    </div>
+
+    <div class="grid">
+        <div class="testimonial">
+            ⭐⭐⭐⭐⭐
+            <p>"The trip was wonderful. The destinations and arrangements
+            made our holiday memorable."</p>
+            <h3>Rahul Sharma</h3>
+        </div>
+
+        <div class="testimonial">
+            ⭐⭐⭐⭐⭐
+            <p>"Amazing travel experience with comfortable accommodation
+            and great sightseeing."</p>
+            <h3>Priya Reddy</h3>
+        </div>
+
+        <div class="testimonial">
+            ⭐⭐⭐⭐⭐
+            <p>"A beautiful holiday experience. The planning made our
+            family trip very enjoyable."</p>
+            <h3>Arjun Kumar</h3>
+        </div>
+    </div>
+</section>
+
+<!-- BOOKING -->
 <section class="booking" id="contact">
-    <h2 class="section-title">Book Your Trip</h2>
-    <p class="subtitle" style="color:white">
-        Fill in your details and plan your next adventure.
-    </p>
+    <div class="heading">
+        <h2>Book Your Dream Vacation</h2>
+        <p style="color:white">Tell us about your travel plans.</p>
+    </div>
 
     <form onsubmit="bookTrip(event)">
-        <input type="text" placeholder="Your Full Name" required>
-        <input type="email" placeholder="Your Email Address" required>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
         <input type="tel" placeholder="Phone Number" required>
 
         <select required>
-            <option value="">Select Destination</option>
+            <option value="">Choose Destination</option>
             <option>Bali</option>
             <option>Paris</option>
             <option>Switzerland</option>
             <option>Agra</option>
+            <option>Kerala</option>
+            <option>Maldives</option>
         </select>
 
         <input type="date" required>
-        <textarea placeholder="Your Message" rows="4"></textarea>
+        <input type="number" placeholder="Number of Travellers"
+        min="1" required>
 
-        <button type="submit">Submit Booking</button>
+        <textarea rows="4" placeholder="Additional Requirements"></textarea>
+
+        <button type="submit">Send Booking Request</button>
     </form>
 </section>
 
+<!-- NEWSLETTER -->
+<section class="newsletter">
+    <div class="heading">
+        <h2>Join Our Travel Newsletter</h2>
+        <p>Get travel inspiration, offers and holiday updates.</p>
+    </div>
+
+    <form onsubmit="subscribe(event)">
+        <input type="email" placeholder="Enter your email" required>
+        <button class="btn">Subscribe</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
 <footer>
-    <h2>🌍 Explore World</h2>
-    <p>Your Journey, Our Passion!</p>
-    <p>Email: info@exploreworld.com</p>
-    <p>© 2026 Explore World. All Rights Reserved.</p>
+    <div class="footer-grid">
+
+        <div>
+            <h3>🌍 Explore World</h3>
+            <p>Your journey, our passion.</p>
+            <p>Creating unforgettable travel experiences.</p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <a href="#home">Home</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#about">About Us</a>
+            <a href="#packages">Packages</a>
+        </div>
+
+        <div>
+            <h3>Our Services</h3>
+            <p>Holiday Packages</p>
+            <p>Hotel Booking</p>
+            <p>Adventure Tours</p>
+            <p>Family Holidays</p>
+        </div>
+
+        <div>
+            <h3>Contact Information</h3>
+            <p>Email: info@exploreworld.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>India</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        <p>© 2026 Explore World. All Rights Reserved.</p>
+    </div>
 </footer>
 
 <script>
 function bookTrip(event) {
     event.preventDefault();
-    alert("Thank you! Your booking request has been received.");
+    alert("Thank you! Your travel booking request has been received.");
+    event.target.reset();
+}
+
+function subscribe(event) {
+    event.preventDefault();
+    alert("Thank you for subscribing to Explore World!");
+    event.target.reset();
+}
+
+function searchTrips() {
+    const destination =
+    document.getElementById("searchDestination").value.trim();
+
+    if (!destination) {
+        alert("Please enter a destination.");
+        return;
+    }
+
+    const cards = document.querySelectorAll(".destination");
+    let found = false;
+
+    cards.forEach(card => {
+        const match = card.innerText.toLowerCase()
+        .includes(destination.toLowerCase());
+
+        card.style.display = match ? "block" : "none";
+        if (match) found = true;
+    });
+
+    document.getElementById("destinations").scrollIntoView();
+
+    if (!found) {
+        alert("No matching destination found. Try Bali, Paris, Kerala or Agra.");
+    }
 }
 </script>
 
